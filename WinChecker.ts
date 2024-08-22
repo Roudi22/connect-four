@@ -1,4 +1,6 @@
-class WinChecker {
+import { Board } from "./Board";
+import { Player } from "./Player";
+export class WinChecker {
     constructor(private board: Board) {}
 
     public checkForWin(player: Player): boolean {
