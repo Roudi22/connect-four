@@ -1,4 +1,5 @@
-class Board {
+import { Move } from "./Move";
+export class Board {
     private grid: ("X" | "O" | null)[][];
     constructor( private rows: number = 6, private columns: number = 7) {
         this.grid = new Array(rows).fill(null).map(() => new Array(columns).fill(null)); // fyller en array med nuller
