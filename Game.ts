@@ -1,8 +1,17 @@
-class Game {
+// Game.ts
+
+import { Board } from './Board';
+import { WinChecker } from './WinChecker';
+import { Player } from './Player';
+import { Move } from './Move';
+import promptSync from 'prompt-sync';
+
+export class Game {  // <-- Lägg till export här
     private board: Board;
     private winChecker: WinChecker;
     private players: [Player, Player];
     private currentPlayerIndex: number = 0;
+    private prompt: Function;
 
     constructor(player1Name: string, player2Name: string) {
         const player1 = new Player(player1Name, 'X');
@@ -10,6 +19,7 @@ class Game {
         this.players = [player1, player2];
         this.board = new Board();
         this.winChecker = new WinChecker(this.board);
+        this.prompt = promptSync(); // Detta initialiserar prompt-sync
     }
 
     public start(): void {
@@ -40,10 +50,9 @@ class Game {
     }
 
     private getMoveColumn(player: Player): number {
-        const prompt = require('prompt-sync')();
         let column: number;
         do {
-            column = parseInt(prompt(`${player.name} (${player.symbol}), välj en kolumn (0-${this.board['columns'] - 1}): `));
+            column = parseInt(this.prompt(`${player.name} (${player.symbol}), välj en kolumn (0-${this.board['columns'] - 1}): `));
         } while (isNaN(column) || column < 0 || column >= this.board['columns']);
         return column;
     }
