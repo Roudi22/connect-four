@@ -56,7 +56,7 @@ node dist/index.js
 ```
 
 ## Output
-[Outout Preview](./images/image.png)
+(./images/image.png)
 
 ## Spelregler
 - Spelbrädet är ett rutnät med 6 rader och 7 kolumner.
