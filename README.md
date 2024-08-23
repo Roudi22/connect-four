@@ -52,7 +52,7 @@ För att starta spelet, kör följande kommando:
 
 ```bash
 node dist/index.js
-
+```
 
 ## Spelregler
 - Spelbrädet är ett rutnät med 6 rader och 7 kolumner.
