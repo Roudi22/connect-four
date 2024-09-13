@@ -53,7 +53,7 @@ export class Game {  // <-- Lägg till export här
         let column: number;
         do {
             column = parseInt(this.prompt(`${player.name} (${player.symbol}), välj en kolumn (0-${this.board['columns'] - 1}): `));
-        } while (isNaN(column) || column < 0 || column >= this.board['columns']);
+        } while (isNaN(column) || column < 0 || column >= this.board['columns']); 
         return column;
     }
 }
