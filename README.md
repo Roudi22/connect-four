@@ -6,6 +6,7 @@ Detta är en terminalbaserad implementation av det klassiska spelet 4-i-rad (Con
 
 - [Förutsättningar](#förutsättningar)
 - [Installation](#installation)
+- [Output](#output)
 - [Användning](#användning)
 - [Spelregler](#spelregler)
 - [Funktioner](#funktioner)
@@ -53,6 +54,9 @@ För att starta spelet, kör följande kommando:
 ```bash
 node dist/index.js
 ```
+
+## Output
+![preview img](./images/image.png)
 
 ## Spelregler
 - Spelbrädet är ett rutnät med 6 rader och 7 kolumner.
